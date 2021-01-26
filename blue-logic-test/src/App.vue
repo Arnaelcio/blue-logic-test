@@ -15,6 +15,9 @@
     <body id="body">
       <div class="container">
         <navBar></navBar>
+        <div id="back__bar">
+           voltar
+        </div>
         <myMain></myMain>
         <mySideBar></mySideBar>
       </div>
@@ -26,6 +29,7 @@
 import NavBar from "./components/NavBar";
 import myMain from "./components/Main";
 import mySideBar from "./components/SideBar";
+
 export default {
   components: {
     NavBar,
@@ -34,7 +38,6 @@ export default {
   },
 };
 </script>
-
 
 
                     <!-- <vue-ellipse-progress

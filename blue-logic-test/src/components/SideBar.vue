@@ -2,8 +2,7 @@
   <div id="sidebar">
     <div class="sidebar__title">
       <div class="sidebar__img">
-        <img src="src/images/logo2.png" alt="logo" />
-        <h1>Blue Logic</h1>
+        <i class="fa fa-clipboard"></i>
       </div>
       <i
         v-on:click="closeSidebar()"
@@ -14,17 +13,14 @@
     </div>
 
     <div class="sidebar__menu">
-      <div class="sidebar__link active_menu_link">
-        <i class="fa fa-home"></i>
-        <a href="#">Dashboard</a>
+      <div class="sidebar__link">
         <div class="sidebar_navbar__left">
           <a href="#">Obras</a>
           <a href="#">Notificações</a>
           <a href="#">Cadastros</a>
         </div>
       </div>
-      <h2>ADMIN</h2>
-      <div class="sidebar__link">
+      <div class="sidebar__link active_menu_link">
         <i class="fa fa-th-large" aria-hidden="true"></i>
         <a v-on:click="say('oi')" href="#">Visão Geral</a>
       </div>
@@ -98,10 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="sidebar__logout">
-        <i class="fa fa-power-off"></i>
-        <a href="#">Log out</a>
-      </div>
+
     </div>
   </div>
 </template>
@@ -130,23 +123,27 @@ export default {
 
 <style>
 #sidebar {
-  background: #020209;
+  background: #ffffff;
   grid-area: sidebar;
   overflow-y: auto;
-  padding: 20px;
+  padding: 20px 20px 20px 0px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  /* height: fit-content; */
 }
 
 .sidebar__title {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   color: #f3f4f6;
-  margin-bottom: 30px;
+  margin: 1px 1px 0px 20px;
+  background-color: #c1c1c1;
+  height: 150px;
 }
 
 .sidebar__img {
+  font-size: 110px;
+  color: #a0a0a0;
   display: flex;
   align-items: center;
 }
@@ -167,7 +164,7 @@ export default {
 }
 
 .sidebar__menu > h2 {
-  color: #3ea175;
+  color: #000000;
   font-size: 16px;
   margin-top: 15px;
   margin-bottom: 5px;
@@ -175,7 +172,7 @@ export default {
   font-weight: 700;
 }
 .sidebar__link h2 {
-  color: #3ea175;
+  color: #000000;
   font-size: 16px;
   margin-top: 15px;
   margin-bottom: 5px;
@@ -184,48 +181,30 @@ export default {
 }
 
 .sidebar__link {
-  color: #f3f4f6;
   padding: 10px;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   margin-bottom: 5px;
 }
 
 .active_menu_link {
-  background: rgba(62, 161, 117, 0.3);
-  color: #3ea175;
+  width: 100%;
+  background:#c1c1c1;
+  color: #3e56b2;
 }
 
 .active_menu_link a {
-  color: #3ea175 !important;
+  color: #3e56b2 !important;
 }
 .sidebar_navbar__left {
   display: none;
 }
 .sidebar__link > a {
   text-decoration: none;
-  color: #a5aaad;
+  color: #000000;
   font-weight: 700;
 }
 
 .sidebar__link > i {
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-.sidebar__logout {
-  margin-top: 20px;
-  padding: 10px;
-  color: #e65061;
-}
-
-.sidebar__logout > a {
-  text-decoration: none;
-  color: #e65061;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.sidebar__logout > i {
   margin-right: 10px;
   font-size: 18px;
 }

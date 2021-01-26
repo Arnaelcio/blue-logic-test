@@ -1,94 +1,95 @@
 <template>
-      <div class="main__cards">
-        <div class="card">
-          <i
-            class="fa fa-clipboard fa-2x text-lightblue"
-            aria-hidden="true"
-          ></i>
-          <div class="card_inner">
-            <p class="text-primary-p">Relatórios</p>
-            <span class="font-bold text-title">2</span>
-          </div>
-        </div>
-        <div class="card">
-          <i class="fa fa-list fa-2x text-red" aria-hidden="true"></i>
-          <div class="card_inner">
-            <p class="text-primary-p">Atividades</p>
-            <span class="font-bold text-title">0</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <i
-            class="fa fa-exclamation-circle fa-2x text-yellow"
-            aria-hidden="true"
-          ></i>
-          <div class="card_inner">
-            <p class="text-primary-p">Ocorrências</p>
-            <span class="font-bold text-title">0</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <i class="fa fa-comment fa-2x text-green" aria-hidden="true"></i>
-          <div class="card_inner">
-            <p class="text-primary-p">Comentários</p>
-            <span class="font-bold text-title">6</span>
-          </div>
-        </div>
-        <div class="card">
-          <i class="fa fa-camera fa-2x text-green" aria-hidden="true"></i>
-          <div class="card_inner">
-            <p class="text-primary-p">Fotos</p>
-            <span class="font-bold text-title">4</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <i class="fa fa-video-camera fa-2x text-green" aria-hidden="true"></i>
-          <div class="card_inner">
-            <p class="text-primary-p">Vídeos</p>
-            <span class="font-bold text-title">2</span>
-          </div>
-        </div>
+  <div class="main__cards">
+    <div v-on:mouseover="changeColorOnhover()" class="card">
+      <i class="fa fa-clipboard fa-2x text-gray" aria-hidden="true"></i>
+      <div class="card_inner">
+        <span class="font-bold text-title">2</span>
+        <p class="text-primary-p">Relatórios</p>
       </div>
+    </div>
+
+    <div class="card">
+      <i class="fa fa-list fa-2x text-gray" aria-hidden="true"></i>
+      <div class="card_inner">
+        <span class="font-bold text-title">0</span>
+        <p class="text-primary-p">Atividades</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <i
+        class="fa fa-exclamation-circle fa-2x text-gray"
+        aria-hidden="true"
+      ></i>
+      <div class="card_inner">
+        <span class="font-bold text-title">0</span>
+        <p class="text-primary-p">Ocorrências</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <i class="fa fa-comment fa-2x text-gray" aria-hidden="true"></i>
+      <div class="card_inner">
+        <span class="font-bold text-title">6</span>
+        <p class="text-primary-p">Comentários</p>
+      </div>
+    </div>
+    <div class="card">
+      <i class="fa fa-camera fa-2x text-gray" aria-hidden="true"></i>
+      <div class="card_inner">
+        <span class="font-bold text-title">4</span>
+        <p class="text-primary-p">Fotos</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <i class="fa fa-video-camera fa-2x text-gray" aria-hidden="true"></i>
+      <div class="card_inner">
+        <span class="font-bold text-title">2</span>
+        <p class="text-primary-p">Vídeos</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  
-}
+  methods: {
+  },
+};
 </script>
 
 
 <style>
 .main__cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
   gap: 30px;
   margin: 9px 0;
+  /* background-color: aqua; */
 }
 
 .card {
+  border: 1px solid #c2c3c3;
+  border-top: 3px solid red;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: space-around;
   padding: 8px;
-  border-radius: 5px;
+  border-radius: 3px;
   background: #ffffff;
-  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
   cursor: pointer;
+  width: 100%;
 }
-
 
 .card_inner {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 .card_inner > span {
   font-size: 25px;
 }
-
 </style>
